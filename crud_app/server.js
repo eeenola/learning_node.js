@@ -26,12 +26,9 @@ app.set("view engine" , "ejs")
 app.use('/css' , express.static(path.resolve(__dirname , "assests/css")))
 app.use('/img' , express.static(path.resolve(__dirname , "assests/img")))
 app.use('/js' , express.static(path.resolve(__dirname , "assests/js")))
-//css/style.css
 
-
-app.get('/', (req, res) => {
-    res.render("index");
-});
+//load routers
+app.use('/', require('./server/routes/router'));
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
