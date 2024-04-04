@@ -1,0 +1,242 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Variables */
+:root {
+   --dark: black;
+   --light: grey;
+   --border: rgb(184, 184, 188);
+   --border-btn: rgb(239, 186, 186);
+}
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+a {
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* Utility Classes */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-shadow {
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px rgb(233, 159, 21);
+}
+
+.inline {
+    display: inline-block;
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, rgb(242, 97, 242), #5e47a4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header Styles */
+#header nav {
+    background-color: aquamarine;
+    padding: 1em 0;
+    width: 100%;
+}
+
+/* Main Site Styles */
+#site-main {
+    margin-top: 6em;
+    font-family: "Barlow", sans-serif;
+}
+
+#site-main .container.box-nav > a {
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+#site-main .container form {
+    margin: 2em 0;
+}
+
+/* Table Styles */
+table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+tbody {
+    text-align: center; 
+}
+
+.tabletd, 
+.tableth {
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.tabletd > a.btn {
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0.2em;
+}
+
+.table tr:hover {
+    background-color: aquamarine;
+}
+
+.table tr:hover td>a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: antiquewhite;
+    background-color: var(--dark);
+    border-color: brown;
+}
+
+@media only screen and (max-width: 1024px){
+   table, thead, tbody, th, td, tr{
+    display: block;
+   } 
+
+   thead tr{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+   }
+
+   tr{border: 1px solid var(--border);}
+
+   td{
+    border: none;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+   }
+}
+
+
+/*add user & update user template*/
+
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title > h2{
+    padding: .5em 0;
+}
+
+.new_user{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group{
+    margin: .4em 0;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_user .form-group .radio,
+#add_user .form-group .radio{
+    margin: 1em 2em;
+}
+
+/*adding styles to radio buttons*/
+.radio input[type='radio']{
+    position: absolute;
+    opacity: 0;
+}
+
+.radio input[type='radio']+.radio-label:before{
+    content: "";
+    background: var(--border-btn);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: -0em;
+    margin-right: .5em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.radio input[type='radio']:checked + .radio-label:before{
+    background-color: aquamarine;
+    box-shadow: inset 0 0 0 4px wheat;
+}
+
+.radio input[type='radio']:focus + .radio-label:before{
+    outline: none;
+    border-color: aqua;
+}
+
+.radio input[type='radio']:disabled + .radio-label:before{
+    box-shadow: inset 0 0 0 4px wheat;
+    border-color: grey;
+    background-color: grey;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color: aquamarine;
+    border: none;
+    font-family: "PT Serif", serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn{
+    background-color: var(--dark);
+    color: var(--border);
+}
