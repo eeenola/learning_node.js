@@ -16,7 +16,7 @@ $("#update_user").submit(function(event){
     var request = {
         "url" : `http://localhost:3000/api/users/${data.id}`,
         "method" : "PUT",
-        "data" : data
+        "data" : data,
     }
 
     $.ajax(request).done(function(response){
