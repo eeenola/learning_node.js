@@ -16,7 +16,6 @@ app.use(morgan('tiny'));
 
 // mongodb connection
 connectDB();
-console.log("sfsdf")
 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({ extended: true }));
