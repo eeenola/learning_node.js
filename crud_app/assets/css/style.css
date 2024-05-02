@@ -1,155 +1,145 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
 
-/* Variables */
-:root {
-   --dark: black;
-   --light: grey;
-   --border: rgb(184, 184, 188);
-   --border-btn: rgb(239, 186, 186);
+:root{
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
 }
 
-/* Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
 a {
     text-decoration: none;
-    font-family: "PT Serif", serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
-.container {
+.container{
     max-width: 1024px;
     margin: auto;
 }
 
-/* Utility Classes */
-.d-flex {
+.nav-brand{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.d-flex{
     display: flex;
     flex-wrap: wrap;
 }
 
-.justify-between {
+.justify-between{
     justify-content: space-between;
 }
 
-.text-center {
+.text-center{
     text-align: center;
 }
 
-.border-shadow {
+.border-shadow{
     border: 1px solid var(--border-btn);
-    box-shadow: 1px 3px 10px rgb(233, 159, 21);
+    box-shadow: 1px 3px 10px #e9ecef;
 }
 
-.inline {
-    display: inline-block;
-}
-
-.text-dark {
+.text-dark{
     color: var(--dark);
 }
 
-.text-light {
+.inline{
+    display: inline-block;
+}
+
+.text-light{
     color: var(--light);
 }
 
-.text-gradient {
-    background: linear-gradient(to right, rgb(242, 97, 242), #5e47a4);
+.text-gradient{
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Header Styles */
-#header nav {
-    background-color: aquamarine;
+#header nav{
+    background-color: #06d6a0;
     padding: 1em 0;
     width: 100%;
 }
 
-/* Main Site Styles */
-#site-main {
+#site-main{
     margin-top: 6em;
-    font-family: "Barlow", sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
-#site-main .container.box-nav > a {
+#site-main .container .box-nav > a{
     font-size: 1em;
     padding: .5em 1em;
 }
 
-#site-main .container form {
+#site-main .container form{
     margin: 2em 0;
 }
 
-/* Table Styles */
-table {
+table{
     border-spacing: 0px;
     width: 100%;
 }
 
-tbody {
-    text-align: center; 
-}
-
-.tabletd, 
-.tableth {
+.table td, .table th{
     padding: .75em;
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
 }
 
-.tabletd > a.btn {
+.table td > a.btn{
     padding: .3em 1em;
     font-size: 1.1em;
-    margin: 0.2em;
+    margin: 0 .2em;
 }
 
-.table tr:hover {
-    background-color: aquamarine;
+.table tr:hover{
+    background-color:#06d6a0 ;
 }
 
-.table tr:hover td>a{
+.table tr:hover td > a{
     box-shadow: none;
 }
 
 .table .thead-dark th{
-    color: antiquewhite;
-    background-color: var(--dark);
-    border-color: brown;
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #32383e;
 }
 
 @media only screen and (max-width: 1024px){
-   table, thead, tbody, th, td, tr{
-    display: block;
-   } 
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
 
-   thead tr{
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-   }
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
 
-   tr{border: 1px solid var(--border);}
+    tr { border: 1px solid var(--border);}
 
-   td{
-    border: none;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-   }
+    td{
+        border: none;
+        position: relative;
+    }
+
 }
 
-
-/*add user & update user template*/
-
+/*  add user & update user template */
 .form-title{
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 
 .form-title > h2{
@@ -172,7 +162,7 @@ tbody {
     padding: .6em 1em;
     margin: .5em 0;
     border: 1px solid var(--border);
-    font-family: "Barlow", sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 1em;
     border-radius: .2em;
 }
@@ -182,13 +172,13 @@ tbody {
     margin: 1em 2em;
 }
 
-/*adding styles to radio buttons*/
+/* adding style to radio buttons */
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
 }
 
-.radio input[type='radio']+.radio-label:before{
+.radio input[type='radio'] + .radio-label:before{
     content: "";
     background: var(--border-btn);
     border-radius: 100%;
@@ -207,36 +197,36 @@ tbody {
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color: aquamarine;
-    box-shadow: inset 0 0 0 4px wheat;
+    background-color: #16db93;
+    box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
-    border-color: aqua;
+    border-color:#16db93;
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
-    box-shadow: inset 0 0 0 4px wheat;
-    border-color: grey;
-    background-color: grey;
+    box-shadow: inset 0 0 0 4px #e9ecef;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
 }
 
 #update_user .form-group .btn,
 #add_user .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color: aquamarine;
+    background-color:#16db93; 
     border: none;
-    font-family: "PT Serif", serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
     margin: .5em 0;
 }
 
-#update_user .form-group .btn,
-#add_user .form-group .btn{
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }
