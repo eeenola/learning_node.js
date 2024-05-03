@@ -1,0 +1,48 @@
+[
+    {
+        "name" : "iphone" ,
+        "price" : 154000 ,
+        "feature" : true ,
+        "company" : "apple" 
+    },
+    {
+        "name" : "iphone11" ,
+        "price" : 111000 ,
+        "feature" : false ,
+        "company" : "apple" 
+    } ,
+    {
+        "name" : "watch" ,
+        "price" : 144000 ,
+        "company" : "apple" 
+    } ,
+    {
+        "name" : "S24" ,
+        "price" : 154000 ,
+        "feature" : false ,
+        "company" : "samsung" 
+    } ,
+    {
+        "name" : "watch" ,
+        "price" : 44000 ,
+        "feature" : true ,
+        "company" : "samsung" 
+    },
+    {
+        "name" : "colorsR22" ,
+        "price" : 54000 ,
+        "feature" : true ,
+        "company" : "colors" 
+    } ,
+    {
+        "name" : "M7F" ,
+        "price" : 54000 ,
+        "company" : "mi" 
+    },
+    {
+        "name" : "laptop" ,
+        "price" : 254000 ,
+        "feature" : true ,
+        "company" : "dell" 
+    }
+]
