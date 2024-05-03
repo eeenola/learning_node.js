@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema ({
         type : Number ,
         required : [true , "price must be provided"],
     },
-    featured : {
+    feature : {
         type : Boolean ,
         default : true ,
     },
@@ -31,4 +31,4 @@ const ProductSchema = new mongoose.Schema ({
 });
 
 
-module.exports = mongoose.model("Product" , productSchema);
+module.exports = mongoose.model("Product" , ProductSchema);
